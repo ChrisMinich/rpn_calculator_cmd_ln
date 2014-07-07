@@ -40,8 +40,15 @@ class calc {
 	
 	public static void divide() {
 		popTwo();
-		double result = y / x;
-		pushResult(result);
+		if ( x == 0 ) {
+			System.out.println("Cannot divide by 0.");
+			calcStack.push(y);
+			calcStack.push(x);
+		}
+		else {
+			double result = y / x;
+			pushResult(result);
+		}
 	}
 	
 	public static void showStack() {
