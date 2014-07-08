@@ -17,9 +17,10 @@ Example run ("?" is your prompt, the following line shows the result):
 150
 ```
 
-When finished, just enter a lower-case 'q' at the prompt.
-To look at the stack (currently an array of size 4), type 's'.
+To look at the stack (currently an array of size 8), type 's'.
 
-One more note: if you overfill the stack, the bottom of the stack is deleted,
-and the values above drop down. If you enter: 1 2 3 4 5, the stack will contain
-the values 2, 3, 4 and 5 (for a stack of size 4 - the current setting).
+If you overfill the stack, the bottom of the stack is deleted,and the numbers 
+above drop down. For example, if you enter: 1 2 3 4 5 6 7 8 9 10, the stack will 
+consist of the last 8 numbers (because the stack size is set to 8).
+
+To quit, type 'q'

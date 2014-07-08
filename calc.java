@@ -7,7 +7,7 @@
  */
 
 class calc {
-	public static RegisterStack calcStack = new RegisterStack(4, "x");
+	public static RegisterStack calcStack = new RegisterStack(8, "primary");
 	public static double x, y;
 	
 	private static void popTwo() {
@@ -51,6 +51,7 @@ class calc {
 		}
 	}
 	
+	// print out the stack
 	public static void showStack() {
 		for (int i=0; i<calcStack.getCount(); i++)
 			System.out.println(calcStack.show(i));
@@ -68,9 +69,11 @@ class calc {
 	}
 	
 	public static void main(String args[]) {	
-		inputBuffer stringBuffer = new inputBuffer();
+		InputBuffer stringBuffer = new InputBuffer();
 		String entry;
 		double d;
+		
+		System.out.println("Valid commands: +, -, *, /, s, q");
 		
 		do {
 			entry = stringBuffer.getNextString();
@@ -80,10 +83,10 @@ class calc {
 			}
 			else {
 				if (entry.equals("+")) add();
-				if (entry.equals("-")) subtract();
-				if (entry.equals("*")) multiply();
-				if (entry.equals("/")) divide();
-				if (entry.equals("s")) showStack();
+				else if (entry.equals("-")) subtract();
+				else if (entry.equals("*")) multiply();
+				else if (entry.equals("/")) divide();
+				else if (entry.equals("s")) showStack();
 			}	
 		} while (!entry.equals("q"));
 	}

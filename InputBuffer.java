@@ -1,5 +1,5 @@
 /**
-	inputBuffer.java
+	InputBuffer.java
 	by Chris Minich
 	cfminich@gmail.com
 	
@@ -12,16 +12,15 @@
  
 import java.io.*;
 
-class inputBuffer {
+class InputBuffer {
 	private String buffer;
 	private int position;
 	private BufferedReader newLine = new BufferedReader(new InputStreamReader(System.in));
 	
 	// Construct empty buffer
-	public inputBuffer() {
+	public InputBuffer() {
 		position = -1;
 		buffer = "";
-		System.out.println("Buffer length: " + buffer.length());
 	}
 	
 	// Prompt for input when buffer is empty
