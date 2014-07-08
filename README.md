@@ -8,11 +8,14 @@ onto the stack. When an operator is encountered, two numbers are popped from
 the stack, and the result is pushed in their place.
 
 Example run ("?" is your prompt, the following line shows the result):
+
+```
 ? 45 55 +
 100
 ? 10 5 * +
 50
 150
+```
 
 When finished, just enter a lower-case 'q' at the prompt.
 To look at the stack (currently an array of size 4), type 's'.
